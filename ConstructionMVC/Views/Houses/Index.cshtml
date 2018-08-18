@@ -1,0 +1,87 @@
+﻿@model IEnumerable<ConstructionMVC.House>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Rooms)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Floors)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsGarage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BuildDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LocationID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Customer.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Location.StreetName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Type.Style)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Location1.StreetName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Type1.Style)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Rooms)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Floors)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsGarage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BuildDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LocationID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Customer.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Location.StreetName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Type.Style)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Location1.StreetName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Type1.Style)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Location_HouseID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Location_HouseID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Location_HouseID })
+        </td>
+    </tr>
+}
+
+</table>

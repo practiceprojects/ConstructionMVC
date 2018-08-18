@@ -1,0 +1,51 @@
+﻿@model IEnumerable<ConstructionMVC.Type>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Style)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HouseID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.House.Rooms)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.House1.Rooms)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Style)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HouseID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.House.Rooms)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.House1.Rooms)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.TypeID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.TypeID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.TypeID })
+        </td>
+    </tr>
+}
+
+</table>

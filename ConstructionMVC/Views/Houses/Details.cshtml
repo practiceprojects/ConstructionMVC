@@ -1,0 +1,98 @@
+﻿@model ConstructionMVC.House
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>House</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Rooms)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rooms)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Floors)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Floors)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsGarage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsGarage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BuildDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BuildDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LocationID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LocationID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Customer.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Customer.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Location.StreetName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Location.StreetName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Type.Style)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Type.Style)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Location1.StreetName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Location1.StreetName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Type1.Style)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Type1.Style)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Location_HouseID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
